@@ -39,9 +39,30 @@ npm install
 bower install
 ```
 
-### Roadmap
+### Running the App
 
-View the project roadmap [here](http://www.zombo.com)
+Check out the [ionic framework docs](http://ionicframework.com/getting-started/) for cli information, and for how to set up mobile emulation.
+
+From within the app directory:
+
+```
+//to serve on browser for development
+ionic serve
+
+//to emulate on phone emulator
+ionic build
+ionic emulate ios //or
+ionic emulate android
+
+//to run on a phone, make sure phone has dev settings on
+ionic build
+ionic run ios //or
+ionic run android
+```
+
+### Server
+
+Server is currently set up via Digital Ocean. Please [email Chris](mailto:claymanchris@gmail.com) for login credentials and SSH keys.
 
 
 ## Contributing

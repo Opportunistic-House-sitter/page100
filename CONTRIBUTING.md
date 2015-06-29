@@ -4,6 +4,9 @@
 
 please run `gulp integrate` in your command line for a list of tasks.
 
+Our team forewent CI tools in preference to a manual CI box. Future teams can ditch our approach for something more simpler/automated, as we found this process somewhat cumbersome.
+
+
 1. Fork
 1. Create a namespaced feature branch from master
   - bug/...
@@ -22,7 +25,19 @@ please run `gulp integrate` in your command line for a list of tasks.
 1. Fix conflicts if they arise. run gulp to build and test.
 1. Fix any issues and push your fixes to origin staging.
 1. Create pull request on Github
-1. Once your pull request has been reviewed and tested, it will be merged by another member of the team. 
+1. Once your pull request has been reviewed and tested, it will be merged by another member of the team.
+
+#### Integration Box For Scrum master
+
+1. Create an 'Integration Box' in a different directory of your machine. This represents known-good production code.
+1. Pull from origin staging in group repo.
+1. Run tests
+1. Merge into master branch and push to origin master.
+
+
+**The strength here is that you get to see the code moving to the production repo. Code review can be more streamlined with this process, as well, and only 'known-good' code will make it to your master branch.**
+
+
 
 
 ## Detailed Workflow
@@ -44,7 +59,7 @@ These commands will help you do this:
 git checkout -b `your-branch-name`
 ```
 
-### Make commits to your feature branch. 
+### Make commits to your feature branch.
 
 Prefix each commit like so
   - (feat) Added a new feature
@@ -113,7 +128,7 @@ you get here again and nothing is broken and all the tests pass.
 
 ### Push to staging
 
-**git push origin staging** 
+**git push origin staging**
 
 Thanks for contributing!
 
@@ -121,9 +136,8 @@ Thanks for contributing!
 
 1. Uphold the current code standard:
     - Keep your code [DRY][].
-    - Apply the [boy scout rule][].
-    - Follow [STYLE-GUIDE.md](STYLE-GUIDE.md)
-1. Run the [tests][] before submitting a pull request.
+    - Follow the **super-strict** rules of ESHint for styling.
+1. Run `gulp` before submitting a pull request. This will **lint**, **test**, and **compile sass**
 1. Tests are very, very important. Submit tests commit includes
    new, testable behavior.
 

@@ -31,7 +31,7 @@
 
 /* Reseting Weird Ionic shit */
 .has-header {
-  top: 0 i
+  top: 0 !important;
 }
 
 /*card swipe css*/
@@ -128,6 +128,14 @@ td-card .back pre {
     opacity: 0;
 }
 
+.box-sampletext {
+  text-align: justify;
+  padding: 15px 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
 /*info styling*/
 .item-thumbnail-left{
   position: absolute;
@@ -138,11 +146,7 @@ td-card .back pre {
   text-align: center;
 }
 
-.info {
-  position: absolute;
-  top: 25%;
-  right:18%;
-}
+
 
 .item-thumbnail-left img{
   width:80%;
@@ -185,3 +189,32 @@ ion-item {
   position: absolute;
   bottom: 80px;
 }
+
+.genre-buttons button {
+  margin: 10px 5px;
+}
+
+/* animation of book cover to text switch */
+
+
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  transition-delay: 0.5s;
+}
+
+
+.animate-show.ng-hide {
+  transform: scaleX(0);
+}
+
+
+
+/*
+.animate-show.back.ng-hide {
+  display: none;
+}*/

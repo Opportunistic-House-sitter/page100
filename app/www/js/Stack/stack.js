@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("starter.controller", [])
+angular.module("starter.stack", [])
 
 .controller("StackCtrl", function($scope, BookChoices, $rootScope) {
   $scope.userId = $rootScope.currentUser.id;

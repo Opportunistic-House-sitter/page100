@@ -8,8 +8,10 @@ angular.module("starter", [
   "ionic",
   "starter.cards",
   "starter.auth",
-  "starter.services",
   "starter.controllers",
+  "starter.filters",
+  "starter.stack",
+  "starter.services",
   "ionic.service.deploy",
   "ionic.contrib.ui.tinderCards",
   "ui.router"])
@@ -92,7 +94,7 @@ angular.module("starter", [
         }
       }
     })
-    
+
     .state("app.stack", {
       url: "/stack",
       views: {

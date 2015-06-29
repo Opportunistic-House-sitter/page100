@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("starter.controllers", [])
+angular.module("starter.filters", [])
 
 .controller("FiltersCtrl", function($scope, filterChoices, userInfo, $rootScope) {
   var userId = $rootScope.currentUser.id;

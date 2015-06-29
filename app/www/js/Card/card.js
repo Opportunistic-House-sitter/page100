@@ -44,9 +44,19 @@ angular.module("starter.cards", [])
     console.log(amt);
   };
 
-
   $scope.showText = function() {
     $scope.clicked = $scope.clicked ? false : true;
+  };
+
+  $scope.clicked = false;
+
+  $scope.like = function( index ){
+    BookChoices.addToStack($scope.userId, $scope.cards[index]);
+    $scope.currentCard = $scope.cards[index - 1];
+  };
+
+  $scope.dislike = function( index ){
+    $scope.currentCard = $scope.cards[index - 1];
   };
 
 });

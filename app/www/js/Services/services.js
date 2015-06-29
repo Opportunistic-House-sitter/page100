@@ -143,16 +143,18 @@ angular.module("starter.services", [])
 
   // updates the user's filters
   .factory("filterChoices", function($http, SERVER){
-    var changeFilter = function (id, genre) {
+    var changeFilter = function(id, genres){
       return $http({
         method: "POST",
         url: SERVER.url + "/user/" + id + "/filterpreferences",
-        data: genre
+        data: genres
       });
     };
 
+    var genresSelected = [{title: "Poetry"}, {title: "Classic"}, {title: "Modernism"}, {title: "Fiction"}, {title: "Fantasy"}, {title: "Sci-fi"}, {title: "Education"}, {title: "Drama"}, {title: "Mystery"}, {title: "Horror"}, {title: "Historical Fiction"}, {title: "Non-fiction"}];
 
     return {
-      changeFilter: changeFilter
+      changeFilter: changeFilter,
+      genresSelected: genresSelected
     };
   });

@@ -47,7 +47,6 @@ angular.module("starter.services", [])
         url: "/users"
       })
       .then(function(resp){
-        console.log(resp);
         return resp.data;
       });
     };

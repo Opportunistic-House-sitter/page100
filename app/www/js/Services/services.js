@@ -124,7 +124,7 @@ angular.module("starter.services", [])
       removeFromStack: removeFromStack
     };
   })
-  
+
   .factory("userInfo", function($http, SERVER){
     var getUser = function(id){
       return $http({
@@ -135,7 +135,7 @@ angular.module("starter.services", [])
         return resp.data;
       });
     };
-    
+
     return {
       getUser: getUser
     };

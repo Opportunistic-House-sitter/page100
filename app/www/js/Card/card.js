@@ -32,10 +32,10 @@ angular.module("starter.cards", [])
     console.log("Right swipe", index);
     console.log($scope.cards[index].genre);
     BookChoices.addToStack($scope.userId, $scope.cards[index]);
-    $scope.currentCard = $scope.cards[index - 1];
   };
 
   $scope.cardDestroyed = function(index) {
+    $scope.cards.splice(index, 1);
     $scope.currentCard = $scope.cards[index - 1];
     console.log("Card removed");
   };
@@ -50,13 +50,18 @@ angular.module("starter.cards", [])
 
   $scope.clicked = false;
 
-  $scope.like = function( index ){
-    BookChoices.addToStack($scope.userId, $scope.cards[index]);
-    $scope.currentCard = $scope.cards[index - 1];
+
+// functions for liking or disliking book via buttons
+// must use currentCard because buttons are out of card scope
+  $scope.like = function( card ){
+    var index = $scope.cards.indexOf(card);
+    $scope.cardSwipedRight(index);
+    $scope.cardDestroyed(index);
   };
 
-  $scope.dislike = function( index ){
-    $scope.currentCard = $scope.cards[index - 1];
+  $scope.dislike = function( card ){
+    var index = $scope.cards.indexOf(card);
+    $scope.cardSwipedLeft(index);
+    $scope.cardDestroyed(index);
   };
-
 });

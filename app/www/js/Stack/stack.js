@@ -9,7 +9,6 @@ angular.module("starter.stack", [])
   $scope.getStack = function( id ) {
     BookChoices.getStack(id)
       .then(function(data){
-        console.log(data);
         $scope.stack = data.stack;
       });
   };

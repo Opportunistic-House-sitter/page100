@@ -126,7 +126,7 @@ angular.module("starter.services", [])
   })
 
   .factory("userInfo", function($http, SERVER){
-    var getUser = function(id){
+    var getUser = function (id) {
       return $http({
         method: "GET",
         url: SERVER.url + "/user/" + id + "/userInfo"

@@ -25,10 +25,10 @@
         </div>
         <div class="row buttons-row" ng-if="!clicked">
           <div class="col">
-            <a class="reject-btn icon ion-close-circled"></a>
+            <a class="reject-btn icon ion-close-circled" ng-click="dislike(currentCard)" show-delete="shouldShowDelete"></a>
           </div>
           <div class="col">
-            <a class="accept-btn icon ion-checkmark-circled"></a>
+            <a class="accept-btn icon ion-checkmark-circled" ng-click="like(currentCard)"></a>
           </div>
         </div>
       </td-cards>

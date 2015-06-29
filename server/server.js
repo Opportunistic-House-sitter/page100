@@ -21,7 +21,7 @@ mongoose.connect("mongodb://user:wemakeawesomeshit@ds051110.mongolab.com:51110/p
 require("./config/middleware.js")(app, express);
 
 //port 80 is normal for digital ocean servers
-var port = 80;
+var port = 3000;
 
 
 app.listen(port, function() {

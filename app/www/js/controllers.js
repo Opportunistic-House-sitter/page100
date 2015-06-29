@@ -61,6 +61,7 @@ angular.module("starter.controllers", [])
     userInfo.getUser(userId)
     .then(function(result){
       if(result.filterPreferences[0]){
+        //this is bad - TODO: reduce complexity
         $scope.genres.selected = $scope.genres[$scope.genres.map(function(genre){return genre.title; }).indexOf(result.filterPreferences[0])];
       }
     });

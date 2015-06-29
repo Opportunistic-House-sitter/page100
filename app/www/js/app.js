@@ -115,16 +115,16 @@ angular.module("starter", [
 
 .constant("SERVER", {
   // local server
-  url: "http://localhost:3000"
+  // url: "http://localhost:3000"
 
-  // Change URL when deployed
-  // url: "SOMEDEPLOYED URL"
+  // URL when deployed
+  url: "http://45.55.142.5:80"
 })
 
 .factory("AttachTokens", function ($window) {
   // this is an $httpInterceptor
   // its job is to stop all out going request
-  // then look in local storage and find the user"s token
+  // then look in local storage and find the user's token
   // then add it to the header so the server can validate the request
   var attach = {
     request: function (object) {

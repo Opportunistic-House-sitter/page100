@@ -13,6 +13,10 @@
   z-index: 100;
 }
 
+.findBooksMenu {
+  padding-top: 50px;
+}
+
 .nav-bar {
   height:50px;
   background-color: #FFFFFF !important;
@@ -49,6 +53,7 @@ td-card {
     border-radius: 6px;
     background-color: rgb(255,255,255);
     text-align: center;
+    perspective: 800px;
 }
 
 .td-card .title {
@@ -194,9 +199,10 @@ ion-item {
   margin: 10px 5px;
 }
 
+
 /* animation of book cover to text switch */
 
-
+/*
 .animate-show.ng-hide-add.ng-hide-add-active,
 .animate-show.ng-hide-remove.ng-hide-remove-active {
   -webkit-transition: all ease-in-out 0.4s;
@@ -210,7 +216,9 @@ ion-item {
 
 .animate-show.ng-hide {
   transform: scaleX(0);
-}
+}*/
+
+
 
 
 

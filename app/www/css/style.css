@@ -158,3 +158,30 @@ ion-item {
 }
 
 /*end of card swipe css*/
+
+
+.reject-btn, .accept-btn {
+  font-size: 110px;
+}
+
+.reject-btn {
+  color: rgba(237,70,48,1);
+}
+
+.reject-btn:active {
+  color: rgba(160, 26, 8, 1);
+}
+
+.accept-btn {
+  color: rgba(20,204,140,1);
+}
+
+.accept-btn:active {
+  color: rgba(0, 134, 87, 1);
+}
+
+.buttons-row {
+  text-align: center;
+  position: absolute;
+  bottom: 80px;
+}

@@ -44,5 +44,9 @@ angular.module("starter.cards", [])
     console.log(amt);
   };
 
-  $scope.clicked = false;
+
+  $scope.showText = function() {
+    $scope.clicked = $scope.clicked ? false : true;
+  };
+
 });

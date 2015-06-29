@@ -6,9 +6,9 @@ angular.module("starter.cards", [])
   //prevent side menu from dragging out with cards
   $ionicSideMenuDelegate.canDragContent(false);
 
+  //repulls books every time the user enters the page
   $scope.$on("$ionicView.enter", function() {
-  $scope.getBooks($scope.userId, 10);
-      console.log("noticed");
+    $scope.getBooks($scope.userId, 10);
   });
 
   // retrieves books from the database
@@ -45,4 +45,14 @@ angular.module("starter.cards", [])
   };
 
   $scope.clicked = false;
+
+  $scope.like = function( index ){
+    BookChoices.addToStack($scope.userId, $scope.cards[index]);
+    $scope.currentCard = $scope.cards[index - 1];
+  }
+
+  $scope.dislike = function( index ){
+    $scope.currentCard = $scope.cards[index - 1];
+  }
+  
 });

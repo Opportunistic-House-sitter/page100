@@ -25,6 +25,7 @@ module.exports = function (app) {
 
   // getting and adding to stack
   app.post("/:id/filterpreferences", userController.changeFilterPreferences);
+  app.get("/:id/userInfo", userController.getUser);
   app.post("/:id/email", userController.changeEmail);
   app.post("/:id/username", userController.changeUsername);
   app.get("/:id/stack", userController.getStack);

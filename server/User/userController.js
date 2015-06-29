@@ -69,7 +69,6 @@ module.exports = {
 
   // compare user from ajax call to determine whether or not they should be allowed in
   signin: function(req, res, next){
-    // res.send("reached signin in userController");
     var username = req.body.username;
     var password = req.body.password;
 
@@ -169,6 +168,10 @@ module.exports = {
             res.json(user);
           }
         });
+  },
+
+  getUser: function(req, res){
+    res.json(req.user);
   },
 
   changeEmail: function(req, res){

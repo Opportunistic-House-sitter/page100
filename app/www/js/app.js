@@ -92,25 +92,16 @@ angular.module("starter", [
         }
       }
     })
-      .state("app.stack", {
-        url: "/stack",
-        views: {
-          "menuContent": {
-            templateUrl: "templates/stack.html",
-            controller: "StackCtrl"
-          }
-        }
-      })
-
-    .state("app.book", {
-      url: "/stack/:bookId",
+    
+    .state("app.stack", {
+      url: "/stack",
       views: {
         "menuContent": {
-          templateUrl: "templates/indvBook.html",
-          controller: "IndvBookCtrl"
+          templateUrl: "templates/stack.html",
+          controller: "StackCtrl"
         }
       }
-    });
+    })
 }])
 
 .constant("SERVER", {

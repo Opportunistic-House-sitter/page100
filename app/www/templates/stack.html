@@ -1,13 +1,22 @@
-<ion-view view-title="Stack" ng-controller="StackCtrl">
+<ion-view ng-controller="StackCtrl">
   <ion-content>
     <ion-list>
       <ion-item ng-repeat="book in stack track by $index">
-      	<img class="bookCover" ng-src="{{ book.image }}">
-      	<div class="stackInfo">
-      		<h2>{{ book.title }}</h2>
-      		<p>{{ book.author }}</p>
-      		<span ng-click="removeFromStack($index)" class="button button-icon ion-minus-circled"></span>
-      	</div>
+        <div class="row">
+          <div class="col col-25">
+            <img class="bookCover" ng-src="{{ book.image }}">
+          </div>
+          <div class="col col-750">
+            <div class="stackInfo">
+          		<h2>{{ book.title }}</h2>
+          		<p>{{ book.author }}</p>
+              <a class="button button-small button-positive" ng-src="{{ book.amazonUrl }}">BUY THIS BOOK</a>
+          		<span ng-click="removeFromStack($index)" class="button button-icon ion-minus-circled"></span>
+          	</div>
+          </div>
+      </div>
+
+
       </ion-item>
     </ion-list>
   </ion-content>

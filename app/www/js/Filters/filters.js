@@ -4,8 +4,10 @@ angular.module("starter.filters", [])
 
 .controller("FiltersCtrl", function($scope, filterChoices, userInfo, $rootScope) {
   var userId = $rootScope.currentUser.id;
+
   $scope.genres = [{title: "Poetry"}, {title: "Classic"}, {title: "Modernism"}, {title: "Fiction"}, {title: "Fantasy"}, {title: "Sci-fi"}, {title: "Education"}, {title: "Drama"}, {title: "Mystery"}, {title: "Horror"}, {title: "Historical Fiction"}, {title: "Non-fiction"}];
   $scope.filteredGenres = [];
+  filterChoices.genresSelected = $scope.filteredGenres;
 
   $scope.addRemoveGenre = function(genre) {
     var index = $scope.filteredGenres.indexOf(genre);
@@ -15,6 +17,7 @@ angular.module("starter.filters", [])
       $scope.filteredGenres.push(genre);
     }
     $scope.changeFilter();
+    filterChoices.genresSelected = $scope.filteredGenres;
   };
 
   $scope.isActive = function(genre) {

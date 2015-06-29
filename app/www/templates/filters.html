@@ -2,7 +2,7 @@
   <ion-content>
     <h1>Filters</h1>
     <div class="genre-buttons">
-        <button ng-repeat="genre in genres" type="button" class="button" ng-class="{'button-assertive': isActive(genre.title), 'button-positive': !isActive(genre.title)}" ng-click="addRemoveGenre(genre.title)">
+        <button ng-repeat="genre in genres" type="button" class="button" ng-class="{'button-assertive': isActive(genre.title), 'button-stable': !isActive(genre.title)}" ng-click="addRemoveGenre(genre.title)">
           {{genre.title}}
         </button>
       </div>

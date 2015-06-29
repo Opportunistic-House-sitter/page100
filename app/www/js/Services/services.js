@@ -126,7 +126,7 @@ angular.module("starter.services", [])
   })
 
   .factory("userInfo", function($http, SERVER){
-    var getUser = function(id){
+    var getUser = function (id) {
       return $http({
         method: "GET",
         url: SERVER.url + "/user/" + id + "/userInfo"
@@ -143,11 +143,11 @@ angular.module("starter.services", [])
 
   // updates the user's filters
   .factory("filterChoices", function($http, SERVER){
-    var changeFilter = function(id, genre){
+    var changeFilter = function(id, genres){
       return $http({
         method: "POST",
         url: SERVER.url + "/user/" + id + "/filterpreferences",
-        data: genre
+        data: genres
       });
     };
 

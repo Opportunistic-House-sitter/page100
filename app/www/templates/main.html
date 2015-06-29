@@ -1,5 +1,5 @@
 <ion-view>
-  <ion-pane ng-controller="CardsCtrl">
+  <ion-pane>
       <td-cards>
         <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)"
         on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)">

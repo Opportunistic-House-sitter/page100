@@ -26,14 +26,16 @@ angular.module("starter.cards", [])
 
   // Handles book swiping
   $scope.cardSwipedLeft = function(index) {
+    $scope.clicked = false;
    console.log("Left swipe", index);
  };
 
  // Adds card to stack when user swipes right
   $scope.cardSwipedRight = function(index) {
+    $scope.clicked = false;
     console.log("Right swipe", index);
-    console.log($scope.cards[index].genre);
     BookChoices.addToStack($scope.userId, $scope.cards[index]);
+
   };
 
   $scope.cardDestroyed = function(index) {
@@ -46,7 +48,11 @@ angular.module("starter.cards", [])
     console.log(amt);
   };
 
-  $scope.clicked = true;
+  $scope.showText = function() {
+    $scope.clicked = $scope.clicked ? false : true;
+ };
+
+ $scope.clicked = false;
 
 
 // functions for liking or disliking book via buttons

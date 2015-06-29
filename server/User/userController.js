@@ -170,7 +170,7 @@ module.exports = {
           }
         });
   },
-  
+
   getUser: function(req, res){
     res.json(req.user);
   },

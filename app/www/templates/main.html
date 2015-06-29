@@ -2,8 +2,8 @@
   <ion-pane ng-controller="CardsCtrl">
       <td-cards>
         <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)"
-        on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" ng-click="clicked = !clicked">
-          <div class="image front" ng-show="!clicked">
+        on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" ng-click="showText()">
+          <div class="image front" ng-hide="clicked">
             <div class = "no-text overlayBox"><div class="noBox boxed">Trash</div></div>
             <img ng-src="{{card.image}}">
             <div class="yes-text overlayBox"><div class="yesBox boxed" id="centerMe">Save</div></div>
@@ -14,11 +14,19 @@
           <div class="yes-text overlayBox"><div class="yesBox boxed" id="centerMe">Save</div></div>
           </div>
         </td-card>
-        <div class="item item-thumbnail-left">
+        <div class="item item-thumbnail-left" ng-if="clicked">
           <img ng-src="{{currentCard.image}}">
           <div class="info">
             <h2>{{currentCard.title}}</h2>
             <p>{{currentCard.author}}</p>
+          </div>
+        </div>
+        <div class="row buttons-row" ng-if="!clicked">
+          <div class="col">
+            <a class="reject-btn icon ion-close-circled"></a>
+          </div>
+          <div class="col">
+            <a class="accept-btn icon ion-checkmark-circled"></a>
           </div>
         </div>
       </td-cards>

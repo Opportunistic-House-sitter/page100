@@ -44,11 +44,7 @@ angular.module("starter.cards", [])
     console.log(amt);
   };
 
-  $scope.showText = function() {
-    $scope.clicked = $scope.clicked ? false : true;
-  };
-
-  $scope.clicked = false;
+  $scope.clicked = true;
 
 
 // functions for liking or disliking book via buttons

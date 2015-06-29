@@ -10,7 +10,7 @@
             <div class="stackInfo">
           		<h2>{{ book.title }}</h2>
           		<p>{{ book.author }}</p>
-              <a class="button button-small button-positive" ng-src="{{ book.amazonUrl }}">BUY THIS BOOK</a>
+              <a class="button button-small button-positive" ng-href="{{ book.amazonLink }}">BUY THIS BOOK</a>
           		<span ng-click="removeFromStack($index)" class="button button-icon ion-minus-circled"></span>
           	</div>
           </div>

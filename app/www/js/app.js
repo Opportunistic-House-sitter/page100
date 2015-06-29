@@ -103,7 +103,7 @@ angular.module("starter", [
           controller: "StackCtrl"
         }
       }
-    })
+    });
 }])
 
 .constant("SERVER", {

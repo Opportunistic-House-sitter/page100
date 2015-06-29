@@ -24,5 +24,4 @@ angular.module("starter.stack", [])
   };
 
   $scope.getStack($scope.userId);
-
 });

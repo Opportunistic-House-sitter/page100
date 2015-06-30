@@ -15,8 +15,10 @@
 1. [Development](#development)
     1. [Installing Dependencies](#installing-dependencies)
     1. [Tasks](#tasks)
+    1. [ToDos](#todos)
 1. [Team](#team)
 1. [Contributing](#contributing)
+1. [Product Development - User Stories]
 
 ## Usage
 
@@ -38,6 +40,26 @@ sudo npm install -g bower
 npm install
 bower install
 ```
+
+### ToDos
+- Design
+  - Android/ios specific design
+  - Splash pages for login/signup
+
+- User Experience
+  - Notification for "Pulling More Books"
+  - Additional genres
+  - Be able to click on stack view to see additional details about books
+  - Add rating to Main view of book swiping
+
+- Social Sharing
+  - Save and share stacks with other users
+
+- API
+  - Find a way to streamline book pulling process - right now only able to pull partial data from Gutenberg Books API (author, title, genre)
+
+
+
 
 ### Running the App
 
@@ -68,3 +90,6 @@ Server is currently set up via Digital Ocean. Please [email Chris](mailto:clayma
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+
+## Product Development - User Stories
+See [PRODUCTDEV.md](PRODUCTDEV.md) for user stories and other product development details

@@ -110,10 +110,10 @@ angular.module("starter", [
 
 .constant("SERVER", {
   // local server
-  url: "http://localhost:3000"
+  // url: "http://localhost:3000"
 
   // URL when deployed
-  // url: "http://45.55.142.5:80"
+  url: "http://45.55.142.5:80"
 })
 
 .factory("AttachTokens", function ($window) {

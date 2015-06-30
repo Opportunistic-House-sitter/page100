@@ -43,7 +43,7 @@ td-cards {
     display: block;
 }
 
-td-card {
+td-card, .noMoreBooks {
     position: absolute;
     margin: 10px 10%;
     width: 80%;
@@ -53,8 +53,12 @@ td-card {
     border-radius: 6px;
     background-color: rgb(255,255,255);
     text-align: center;
-    perspective: 800px;
 }
+
+.noMoreBooks {
+  padding-top: 175px;
+}
+
 
 .td-card .title {
     height: 40px;

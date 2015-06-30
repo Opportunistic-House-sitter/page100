@@ -35,13 +35,15 @@ angular.module("starter.cards", [])
     $scope.clicked = false;
     console.log("Right swipe", index);
     BookChoices.addToStack($scope.userId, $scope.cards[index]);
-
   };
 
   $scope.cardDestroyed = function(index) {
     $scope.cards.splice(index, 1);
     $scope.currentCard = $scope.cards[index - 1];
     console.log("Card removed");
+    if(index === 0){
+      $scope.getBooks($scope.userId, 10);
+    };
   };
 
   $scope.cardPartialSwipe = function(amt){

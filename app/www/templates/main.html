@@ -1,5 +1,5 @@
 <ion-view>
-  <ion-pane ng-controller="CardsCtrl">
+  <ion-pane>
       <td-cards>
         <td-card id="td-card" ontouchstart="this.classList.toggle('hover');" ng-repeat="card in cards" on-destroy="cardDestroyed($index)"
         on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" ng-click="showText()">
@@ -8,7 +8,7 @@
             <img ng-src="{{card.image}}">
             <div class="yes-text overlayBox"><div class="yesBox boxed" id="centerMe">Save</div></div>
           </div>
-          <div class="image back animate-show" ng-show="clicked" >
+          <div class="image back animate-show" ng-show="clicked">
           <div class ="no-text overlayBox"><div class="noBox boxed">Trash</div></div>
           <div class="box-sampletext">
             <pre>{{card.sample}}</pre>

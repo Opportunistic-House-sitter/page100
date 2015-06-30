@@ -150,8 +150,10 @@ angular.module("starter.services", [])
       });
     };
 
+    var genresSelected = [{title: "Poetry"}, {title: "Classic"}, {title: "Modernism"}, {title: "Fiction"}, {title: "Fantasy"}, {title: "Sci-fi"}, {title: "Education"}, {title: "Drama"}, {title: "Mystery"}, {title: "Horror"}, {title: "Historical Fiction"}, {title: "Non-fiction"}];
 
     return {
-      changeFilter: changeFilter
+      changeFilter: changeFilter,
+      genresSelected: genresSelected
     };
   });

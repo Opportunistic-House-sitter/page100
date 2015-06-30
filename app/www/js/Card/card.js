@@ -2,12 +2,14 @@
 
 angular.module("starter.cards", [])
 
-.controller("CardsCtrl", function($scope, BookChoices, $ionicSideMenuDelegate, $rootScope){
+.controller("CardsCtrl", function($scope, filterChoices, BookChoices, $ionicSideMenuDelegate, $rootScope){
   //prevent side menu from dragging out with cards
   $ionicSideMenuDelegate.canDragContent(false);
-
-  //repulls books every time the user enters the page
-  $scope.$on("$ionicView.enter", function() {
+  //repulls books every time the filters change
+  $scope.$watch(function(){
+    return filterChoices.genresSelected.length;
+  }, function(){
+    console.log("change in filter was noticed");
     $scope.getBooks($scope.userId, 10);
   });
 
@@ -24,14 +26,16 @@ angular.module("starter.cards", [])
 
   // Handles book swiping
   $scope.cardSwipedLeft = function(index) {
+    $scope.clicked = false;
    console.log("Left swipe", index);
  };
 
  // Adds card to stack when user swipes right
   $scope.cardSwipedRight = function(index) {
+    $scope.clicked = false;
     console.log("Right swipe", index);
-    console.log($scope.cards[index].genre);
     BookChoices.addToStack($scope.userId, $scope.cards[index]);
+
   };
 
   $scope.cardDestroyed = function(index) {
@@ -46,9 +50,9 @@ angular.module("starter.cards", [])
 
   $scope.showText = function() {
     $scope.clicked = $scope.clicked ? false : true;
-  };
+ };
 
-  $scope.clicked = false;
+ $scope.clicked = false;
 
 
 // functions for liking or disliking book via buttons

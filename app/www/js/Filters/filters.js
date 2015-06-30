@@ -29,8 +29,6 @@ angular.module("starter.filters", [])
     userInfo.getUser(userId)
     .then(function(result){
       if(result.filterPreferences[0]){
-        //this is bad. TODO: please fix this to less complexity.
-
         $scope.filteredGenres = result.filterPreferences;
       }
     });

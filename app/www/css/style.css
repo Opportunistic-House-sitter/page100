@@ -202,11 +202,15 @@ ion-item {
 
 /* animation of book cover to text switch */
 
-/*
+
 .animate-show.ng-hide-add.ng-hide-add-active,
 .animate-show.ng-hide-remove.ng-hide-remove-active {
   -webkit-transition: all ease-in-out 0.4s;
   transition: all ease-in-out 0.4s;
+}
+
+.animate-show.ng-hide-add.back.ng-hide-add-active {
+  transition: all linear 0s;
 }
 
 .animate-show.ng-hide-remove.ng-hide-remove-active {
@@ -216,13 +220,11 @@ ion-item {
 
 .animate-show.ng-hide {
   transform: scaleX(0);
-}*/
+}
 
 
+/* Stack */
 
-
-
-/*
-.animate-show.back.ng-hide {
-  display: none;
-}*/
+.stackInfo span {
+  float: right;
+}

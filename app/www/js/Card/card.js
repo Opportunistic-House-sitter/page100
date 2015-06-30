@@ -43,7 +43,7 @@ angular.module("starter.cards", [])
     console.log("Card removed");
     if(index === 0){
       $scope.getBooks($scope.userId, 10);
-    };
+    }
   };
 
   $scope.cardPartialSwipe = function(amt){

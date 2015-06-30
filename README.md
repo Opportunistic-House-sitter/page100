@@ -85,6 +85,7 @@ ionic run android
 ### Server
 
 Server is currently set up via Digital Ocean. Please [email Chris](mailto:claymanchris@gmail.com) for login credentials and SSH keys.
+MongoDB is currently set up via MobgoLabs. Please [email Chris](mailto:claymanchris@gmail.com) for login credentials.
 
 
 ## Contributing

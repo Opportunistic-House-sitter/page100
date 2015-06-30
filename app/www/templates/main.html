@@ -1,7 +1,7 @@
 <ion-view>
   <ion-pane>
       <td-cards>
-        <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)"
+        <td-card id="td-card" ontouchstart="this.classList.toggle('hover');" ng-repeat="card in cards" on-destroy="cardDestroyed($index)"
         on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" ng-click="showText()">
           <div class="image front animate-show" ng-hide="clicked">
             <div class="no-text overlayBox"><div class="noBox boxed">Trash</div></div>
